@@ -80,4 +80,4 @@ if image:
     response = get_prediction(payload)
 
     #prediction label
-    st.markdown("This is a **{}**".format(response.split('s')[0]))
+    st.markdown("This parking spot is **{}** ".format(response.split('s')[0]))
