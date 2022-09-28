@@ -25,7 +25,7 @@ import io
 #to get predictions
 def get_prediction(image_data):
   #replace your image classification ai service URL
-  url = 'https://askai.aiclub.world/91e46514-9839-4f03-b511-5fed59c7daa0'
+  url = 'https://askai.aiclub.world/5b3725b5-7b58-4028-b9fd-7e94f6b3a6c9'
   r = requests.post(url, data=image_data)
   response = r.json()['predicted_label']
   return response
@@ -34,18 +34,18 @@ def get_prediction(image_data):
 #creating the web app
 
 #title for the web app
-st.title("🐱 Cats & Dogs Classifier 🐶")
+st.title("Classify if the space is free or busy")
 
 #subheader
 st.subheader("About the projct..")
 #write elements 
-st.write("**This web can be used to classify images of cats and dogs. AI was trained in Navigator with AI Club datasets.**")
+st.write("**This web app will help you find if the parking space is empty or free**")
 
 #showing cats images
-st.image("cats.jpg", caption = "Picture of cats")
+st.image("busy.jpg", caption = "Busy space")
 
 #showing dogs images
-st.image("dogs.jpg", caption = "Picture of dogs")
+st.image("free.jpg", caption = "Free space")
 
 
 #file uploading and prediction part
